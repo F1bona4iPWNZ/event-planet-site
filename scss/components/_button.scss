@@ -1,0 +1,21 @@
+@use "../utils/variables" as *;
+
+.button {
+  padding: 16px 0;
+  border: none;
+  font-family: $font-secondary;
+  background: var(--color-primary-red);
+  color: var(--color-primary-light);
+  text-align: center;
+  // text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 67px;
+  font-size: 25px;
+  width: 255px;
+
+  &:hover {
+    background: var(--color-primary-light);
+    color: var(--color-primary-red);
+  }
+}

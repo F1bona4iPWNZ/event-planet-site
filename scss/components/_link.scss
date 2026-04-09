@@ -1,0 +1,6 @@
+@use "../utils/variables" as *;
+.link{
+  width: 22px;
+    height: 22px;
+    fill: var(--color-background-light);
+}

@@ -1,0 +1,166 @@
+@use "../utils/variables" as *;
+
+.services {
+  padding: 26px 0;
+  margin: 0;
+
+  @media screen and (min-width: $bp-mobile) {
+    padding: 40px 0;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    margin: 0 60px;
+    padding: 80px 0;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    margin: 0 95px;
+  }
+
+  &__container {
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__wrapper {
+    background-color: var(--color-background-black);
+    background-image:
+      linear-gradient(0deg, rgba(255, 255, 255, 0.02) 50%, transparent 25%),
+      linear-gradient(0deg, rgba(255, 255, 255, 0.02) 55%, transparent 25%),
+      linear-gradient(0deg, transparent 75%, rgba(255,255,255,0.022) 75%),
+      linear-gradient(0deg, transparent 75%, rgba(255, 255, 255, 0.02) 75%);
+    background-size: 70px 300px;
+    max-width: 920px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  &__events {
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-items: center;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+      margin-bottom: 60px;
+      flex-wrap: nowrap;
+    }
+
+    &--private,
+    &--corporate {
+      flex-direction: row-reverse;
+
+      @media screen and (min-width: $bp-tablet) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__events-image {
+    max-width: 200px;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    @media screen and (min-width: $bp-mobile) {
+      max-width: 240px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 380px;
+    }
+
+    & img {
+      background-position: center;
+      display: block;
+    }
+
+    &--business,
+    &--public {
+      margin-left: 0;
+
+      @media screen and (min-width: $bp-tablet) {
+        margin-left: -60px;
+        margin-top: -24px;
+      }
+
+      @media screen and (min-width: $bp-desktop) {
+        margin-left: -90px;
+      }
+    }
+
+    &--private,
+    &--corporate {
+      margin-right: 0;
+
+      @media screen and (min-width: $bp-tablet) {
+        margin-right: -60px;
+      }
+
+      @media screen and (min-width: $bp-desktop) {
+        margin-right: -90px;
+      }
+    }
+  }
+
+  &__events-content {
+    background-image:
+      linear-gradient(0deg, rgba(255, 255, 255, 0.02) 50%, transparent 25%),
+      linear-gradient(0deg, transparent 75%, rgba(255, 255, 255, 0.02) 75%);
+    background-size: 70px 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 50px;
+      border-bottom: 1px solid var(--color-secondary-light);
+    }
+  }
+
+  &__events-name {
+    font-family: $font-secondary;
+    font-size: $font-size-base;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 25px;
+    }
+  }
+
+  &__events-description {
+    max-width: 200px;
+    font-size: 12px;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: $font-size-base;
+      max-width: 445px;
+    }
+  }
+
+  &__events-button {
+    width: 200px;
+    height: 40px;
+    font-size: $font-size-base;
+    padding: 10px 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      width: 255px;
+      height: 67px;
+      font-size: 25px;
+      padding: 16px 0;
+    }
+  }
+}

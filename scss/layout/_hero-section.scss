@@ -1,0 +1,146 @@
+@use "../utils/variables" as *;
+
+.hero {
+  margin: 0 auto;
+  height: 100vh;
+  // position: relative;
+
+  &__container {
+    // position: relative;
+    height: 100%;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    @media screen and (min-width: $bp-mobile) {
+      align-items: stretch;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 42px;
+    }
+
+    & span {
+      font-size: 36px;
+      font-weight: 700;
+
+      @media screen and (min-width: $bp-tablet) {
+        font-size: 66px;
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../img/hero/hero-background.jpg);
+
+    width: 100%;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      background-position: unset;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  &__link {  
+    width: 22px;
+    height: 22px;
+    fill: var(--color-background-light);
+  }
+
+  &__scrollbar {
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 300px;
+      width: 3px;
+      z-index: 10;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      left: 120px;
+    }
+  }
+
+  &__scrollbar-track {
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary-grey);
+    position: relative;
+    border-radius: 10px;
+  }
+
+  &__scrollbar-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: var(--color-secondary-light);
+    transition: transform 0.4s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-primary-grey);
+  }
+
+  &__arrow {
+    z-index: 10;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-right: 1.5px solid var(--color-secondary-light);
+      border-bottom: 1.5px solid var(--color-secondary-light);
+      transform: rotate(45deg);
+      margin: auto;
+      animation: arrowBounce 1.5s infinite;
+    }
+
+    @keyframes arrowBounce {
+      0%,
+      100% {
+        transform: rotate(45deg) translateY(0);
+      }
+      50% {
+        transform: rotate(45deg) translateY(10px);
+      }
+    }
+  }
+}

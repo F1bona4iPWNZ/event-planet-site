@@ -1,0 +1,83 @@
+@use "../utils/variables" as *;
+
+.footer {
+  position: relative;
+  top: -120px;
+
+  &__container {
+    background-image: url(../img/footer/footer-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__content {
+    padding-top: 100px;
+    padding-bottom: 26px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding-top: 141px;
+      padding-bottom: 56px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-size: 14px;
+
+    @media screen and (min-width: $bp-mobile) {
+      gap: 32px;
+      gap: 32px;
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 52px;
+      font-size: 20px;
+    }
+  }
+
+  &__icon-call {
+    display: inline-block;
+    fill: var(--color-primary-light);
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 0 0 0 var(--color-primary-light);
+    border-radius: 50%;
+    animation: shake 2s infinite; /* Запуск анімації */
+
+    @keyframes shake {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 var(--color-primary-light);
+      }
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+      }
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  }
+
+  &__address-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 30px;
+  }
+
+  &__address-icon {
+    fill: var(--color-primary-gray);
+  }
+}
