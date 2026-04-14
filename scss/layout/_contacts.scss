@@ -1,0 +1,137 @@
+@use "../utils/variables" as *;
+.contacts {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-wrap: nowrap;
+      padding-bottom: 150px;
+    }
+  }
+  &__info {
+    left: 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(
+      136.19deg,
+      var(--color-primary-green) 42.88%,
+      #3a3e59 143.93%
+    );
+
+    max-width: 445px;
+    width: 100%;
+    padding-top: 53px;
+    padding-bottom: 120px;
+
+    @media screen and (min-width: $bp-desktop) {
+      left: 180px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: $font-secondary;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--color-secondary-light);
+  }
+
+  &__phone {
+    display: block;
+  }
+
+  &__form {
+    z-index: 1;
+
+    padding: 34px 15px 65px 15px;
+    background-color: var(--color-secondary-light);
+    color: var(--color-primary-black);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 34px 55px 65px 40px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      padding: 34px 95px 65px 250px;
+    }
+  }
+
+  &__subtitle {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  &__field {
+    position: relative;
+    margin-bottom: 30px;
+    background-color: var(--color-primary-light);
+    height: 42px;
+    min-width: 245px;
+    width: 100%;
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px 10px;
+      border: none;
+      border-bottom: 1px solid var(--color-secondary-dark);
+      background: transparent;
+      font-size: 14px;
+      outline: none;
+      font-family: "Comfortaa", sans-serif;
+    }
+
+    label {
+      position: absolute;
+      left: 0;
+      top: -22px;
+      font-size: 14px;
+      transition: 0.3s;
+      pointer-events: none;
+    }
+
+    &--comment {
+      height: 120px;
+    }
+
+    &--events {
+      margin-bottom: 50px;
+      font-size: 14px;
+    }
+  }
+
+  &__label {
+    background-color: var(--color-secondary-light);
+  }
+}

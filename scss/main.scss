@@ -3,24 +3,21 @@
 
 @use './base/base';
 
-// @use './components/reveal';
+@use './components/reveal';
 @use './components/button';
 @use './components/link';
 @use './components/title';
 @use './components/mobile-menu';
-// @use './components/rating';
-// @use './components/input';
+
+@use './components/custom-select';
 
 @use './layout/header';
-// @use './layout/title';
 @use './layout/hero-section';
 @use './layout/services';
-// @use './layout/section';
 @use './layout/company';
 @use './layout/benefits';
 @use './layout/portfolio';
-// @use './layout/tours';
-// @use './layout/contact-section';
-// @use './layout/footer';
+@use './layout/contacts';
+@use './layout/footer';
 
 

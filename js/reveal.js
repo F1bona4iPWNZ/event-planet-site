@@ -1,22 +1,17 @@
-// const reveals = document.querySelectorAll('.reveal');
+const reveals = document.querySelectorAll('.reveal');
 
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('reveal--active');
-//       observer.unobserve(entry.target);
-//     }
-//   });
-// }, {
-//   threshold: 0.2
-// });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.2 });
 
-// reveals.forEach(el => observer.observe(el));
-
-// document.querySelectorAll('[data-reveal-group]').forEach(group => {
-//   const items = group.querySelectorAll('.reveal');
-
-//   items.forEach((el, i) => {
-//     el.style.transitionDelay = `${i * 0.15}s`;
-//   });
-// });
+reveals.forEach(el => {
+  el.style.opacity = 1;
+  el.style.transform = 'translateY(50px)';
+  el.style.transition = 'all 0.8s ease';
+  observer.observe(el);
+});

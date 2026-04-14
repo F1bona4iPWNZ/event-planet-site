@@ -3,10 +3,8 @@
 .hero {
   margin: 0 auto;
   height: 100vh;
-  // position: relative;
 
   &__container {
-    // position: relative;
     height: 100%;
   }
 
@@ -64,7 +62,7 @@
     gap: 22px;
   }
 
-  &__link {  
+  &__link {
     width: 22px;
     height: 22px;
     fill: var(--color-background-light);

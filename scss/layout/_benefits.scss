@@ -1,8 +1,7 @@
 @use "../utils/variables" as *;
 
-.benefits{
-
-  &__wrapper{
+.benefits {
+  &__wrapper {
     margin: 0 auto;
     background-image: url(../img/benefits/benefits-background.jpg);
     background-repeat: no-repeat;
@@ -14,18 +13,16 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-        padding: 57px 0;
+    padding: 57px 0;
 
-        @media screen and (min-width: $bp-tablet) {
-        gap: 30px;
-      }
+    @media screen and (min-width: $bp-tablet) {
+      gap: 30px;
+    }
   }
 
-  &__content{
+  &__content {
     position: relative;
     background-color: rgba(58, 62, 89, 0.5);
-    // filter: blur(20px);
-    // z-index: 0;
 
     max-width: 255px;
     max-height: 322px;
@@ -35,24 +32,21 @@
     justify-content: center;
   }
 
-  &__icon{
-    // position: relative;
-    // z-index: 2;
+  &__icon {
     padding-top: 38px;
     fill: var(--color-primary-red);
     width: 90px;
     height: 90px;
   }
 
-  &__name{
-padding-top: 22px;
-font-size: 25px;
-font-family: $font-secondary;
+  &__name {
+    padding-top: 22px;
+    font-size: 25px;
+    font-family: $font-secondary;
   }
 
-  &__description{
+  &__description {
     padding: 20px 34px 39px 34px;
-        text-align: center;
+    text-align: center;
   }
-
 }

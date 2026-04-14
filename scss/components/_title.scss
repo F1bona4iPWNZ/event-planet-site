@@ -1,50 +1,44 @@
 @use "../utils/variables" as *;
 
-.title{
-   position: relative;
+.title {
+  position: relative;
   text-align: center;
   margin-bottom: 20px;
 
   @media screen and (min-width: $bp-mobile) {
-   
-  margin-bottom: 40px;
-    }
+    margin-bottom: 40px;
+  }
 
   @media screen and (min-width: $bp-tablet) {
-   
-  margin-bottom: 80px;
-    }
+    margin-bottom: 80px;
+  }
 
   &::before {
- content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100vw;
-  height: 5px;
-  background: var(--color-primary-green);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-    }
-
-  &__name{
-    background: var(--color-background-light); 
-  padding: 0 40px;
-  z-index: 2;
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-  // font-style: $font-main;
-  font-size: 30px;
-  font-weight: 500;
-  color: var(--color-primary-black);
-  // margin: 0 auto;
-
-  @media screen and (min-width: $bp-tablet) {
-   font-size: 50px;
-    }
-
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100vw;
+    height: 5px;
+    background: var(--color-primary-green);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
-   
+
+  &__name {
+    background: var(--color-background-light);
+    padding: 0 40px;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--color-primary-black);
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 50px;
+    }
+  }
 }

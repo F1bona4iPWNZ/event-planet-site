@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Event planet</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
@@ -181,11 +181,13 @@
 
     <section class="services">
       <div class="services__container">
-        <div class="services__header title">
+        <div class="services__header title reveal">
           <h2 class="services__title title__name">Послуги</h2>
         </div>
         <div class="services__wrapper">
-          <div class="services__events services__events--business">
+          <div
+            class="services__events services__events--business reveal reveal--left"
+          >
             <img
               class="services__events-image services__events-image--business"
               src="./img/services/business-events.png"
@@ -204,7 +206,9 @@
             </div>
           </div>
 
-          <div class="services__events services__events--private">
+          <div
+            class="services__events services__events--private reveal reveal--right"
+          >
             <img
               class="services__events-image services__events-image--private"
               src="./img/services/private-events.png"
@@ -224,7 +228,9 @@
             </div>
           </div>
 
-          <div class="services__events services__events--public">
+          <div
+            class="services__events services__events--public reveal reveal--left"
+          >
             <img
               class="services__events-image services__events-image--public"
               src="./img/services/public-events.png"
@@ -242,7 +248,9 @@
             </div>
           </div>
 
-          <div class="services__events services__events--corporate">
+          <div
+            class="services__events services__events--corporate reveal reveal--right"
+          >
             <img
               class="services__events-image services__events-image--corporate"
               src="./img/services/corporate-events.png"
@@ -266,10 +274,10 @@
 
     <section class="company">
       <div class="company__container">
-        <div class="company__header title">
+        <div class="company__header title reveal">
           <h2 class="company__title title__name">Про нас</h2>
         </div>
-        <div class="company__wrapper">
+        <div class="company__wrapper reveal">
           <div class="company__content">
             <div class="company__information">
               Використовуючи власну матеріальну базу та набутий досвід, компанія
@@ -318,11 +326,11 @@
 
     <section class="benefits">
       <div class="benefits__container">
-        <div class="benefits__header title">
+        <div class="benefits__header title reveal">
           <h2 class="benefits__title title__name">Переваги</h2>
         </div>
-        <div class="benefits__wrapper">
-          <div class="benefits__content">
+        <div class="benefits__wrapper reveal">
+          <div class="benefits__content reveal reveal--left">
             <svg class="benefits__icon">
               <use href="./img/icons.svg#icon-benefits-experience"></use>
             </svg>
@@ -332,7 +340,7 @@
             </div>
           </div>
 
-          <div class="benefits__content">
+          <div class="benefits__content reveal reveal--left">
             <svg class="benefits__icon">
               <use href="./img/icons.svg#icon-benefits-variants"></use>
             </svg>
@@ -342,7 +350,7 @@
             </div>
           </div>
 
-          <div class="benefits__content">
+          <div class="benefits__content reveal reveal--left">
             <svg class="benefits__icon">
               <use href="./img/icons.svg#icon-benefits-budget"></use>
             </svg>
@@ -352,7 +360,7 @@
             </div>
           </div>
 
-          <div class="benefits__content">
+          <div class="benefits__content reveal reveal--left">
             <svg class="benefits__icon">
               <use href="./img/icons.svg#icon-benefits-individuality"></use>
             </svg>
@@ -367,14 +375,16 @@
 
     <section class="portfolio">
       <div class="portfolio__container">
-        <div class="portfolio__header title">
+        <div class="portfolio__header title reveal">
           <h2 class="portfolio__title title__name">Портфоліо</h2>
         </div>
         <div class="portfolio__wrapper">
-         
-          <div class="portfolio__top">
+          <div class="portfolio__top reveal">
             <div class="portfolio__info">
-              <p>Краще за нас про наші досягнення говорять наші проекти.  Ось декілька наших останніх робіт.</p>
+              <p>
+                Краще за нас про наші досягнення говорять наші проекти. Ось
+                декілька наших останніх робіт.
+              </p>
               <a href="#" class="portfolio__button button">Портфоліо</a>
             </div>
 
@@ -387,45 +397,254 @@
             </div>
           </div>
 
-          <div class="portfolio__grid">
+          <div class="portfolio__grid reveal">
             <div class="portfolio__card portfolio__card--rozetka">
-               <div class="portfolio__overlay">
-              <h3>Корпоратив для компанії “Rozetka”</h3>
-              <p>Корпоративний захід для компанії “Rozetka”  в стилі 80-х. Масштабний захід, на якому були присутні всі працівники Київського відділу.</p>
-              <div>22.12.2019</div>
-               </div>
+              <div class="portfolio__overlay">
+                <h3>Корпоратив для компанії “Rozetka”</h3>
+                <div>
+                  Корпоративний захід для компанії “Rozetka” в стилі 80-х.
+                  Масштабний захід, на якому були присутні всі працівники
+                  Київського відділу.
+                </div>
+                <p>22.12.2019</p>
+              </div>
             </div>
 
             <div class="portfolio__card portfolio__card--corporate">
               <img src="./img/portfolio/hm.jpg" alt="corporate H&M" />
               <div class="portfolio__overlay">
-               <h3>Корпоратив “H&M”</h3>
-              <p>25.10.2019</p>
+                <h3>Корпоратив “H&M”</h3>
+                <p>25.10.2019</p>
               </div>
             </div>
 
             <div class="portfolio__card portfolio__card--festival">
               <img src="./img/portfolio/hiphop-fest.jpg" alt="Hip Hop fest" />
               <div class="portfolio__overlay">
-              <h3>“Hip-Hop Fest”</h3>
-              <p>25.10.2019</p>
+                <h3>“Hip-Hop Fest”</h3>
+                <p>25.10.2019</p>
               </div>
             </div>
 
             <div class="portfolio__card portfolio__card--graduation">
               <img src="./img/portfolio/graduation.jpg" alt="graduation" />
               <div class="portfolio__overlay">
-              <h3>Випускний НВК ЗШ №256”</h3>
-              <p>25.10.2019</p>
+                <h3>Випускний НВК ЗШ №256”</h3>
+                <p>25.10.2019</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="contacts">
+      <div class="contacts__container">
+        <div class="contacts__info reveal reveal--left">
+          <h3 class="contacts__title">Контакти</h3>
+          <div class="contacts__items">
+            <div class="contacts__item">
+              <svg class="contacts__icon" viewBox="0 0 24 24">
+                <use href="./img/icons.svg#icon-gps"></use>
+              </svg>
+              <a
+                class="contacts__text"
+                href="https://maps.app.goo.gl/o8dij4wCPttb2yFm6"
+                >Київ, вул. Театральна 25/4</a
+              >
+            </div>
+
+            <div class="contacts__item">
+              <svg class="contacts__icon" viewBox="0 0 24 24">
+                <use href="./img/icons.svg#icon-phone"></use>
+              </svg>
+              <div class="contacts__text contacts__text--phone">
+                <a class="contacts__phone" href="tel:380632522525">
+                  + 38 (063) 252 2525
+                </a>
+
+                <a
+                  class="contacts__phone contacts__phone--secondary"
+                  href="tel:380672522525"
+                >
+                  + 38 (067) 252 2525
+                </a>
+              </div>
+            </div>
+
+            <div class="contacts__item">
+              <svg class="contacts__icon" viewBox="0 0 24 24">
+                <use href="./img/icons.svg#icon-mail"></use>
+              </svg>
+              <a class="contacts__text" href="mailto:www.eventplanet@gmail.com"
+                >eventplanet@gmail.com</a
+              >
+            </div>
+
+            <div class="contacts__item">
+              <svg class="contacts__icon" viewBox="0 0 24 24">
+                <use href="./img/icons.svg#icon-time"></use>
+              </svg>
+              <a class="contacts__text">Пн - Пт: 9:00 - 20:00</a>
+            </div>
+          </div>
+        </div>
+        <form class="contacts__form reveal reveal--right">
+          <h2 class="contacts__form-title">Залиште заявку</h2>
+          <p class="contacts__subtitle">
+            Протягом години ми зв’яжемось з Вами!
+          </p>
+
+          <div class="contacts__field">
+            <input type="text" required id="name" autocomplete="name" />
+            <label for="name">Ім'я</label>
+          </div>
+
+          <div class="contacts__field">
+            <input
+              autocomplete="tel"
+              id="phone"
+              type="tel"
+              required
+              pattern="\+380\d{9}"
+              title="Формат: +380XXXXXXXXX"
+            />
+            <label for="phone">Номер телефону</label>
+          </div>
+
+          <div class="contacts__field contacts__field--events">
+            <div id="services-label" class="contacts__label">Тип заходу</div>
+
+            <div class="custom-select" data-select>
+              <input type="hidden" value="corporate" autocomplete="off" />
+
+              <div
+                class="custom-select__selected"
+                data-select-trigger
+                tabindex="0"
+                role="button"
+                aria-haspopup="listbox"
+                aria-labelledby="services-label"
+              >
+                <span class="custom-select__text">Корпоративний захід</span>
+                <span class="custom-select__arrow"></span>
+              </div>
+
+              <div class="custom-select__dropdown" role="listbox">
+                <div
+                  class="custom-select__option"
+                  data-value="corporate"
+                  role="option"
+                >
+                  Корпоративний захід
+                </div>
+                <div
+                  class="custom-select__option"
+                  data-value="public"
+                  role="option"
+                >
+                  Публічний захід
+                </div>
+                <div
+                  class="custom-select__option"
+                  data-value="business"
+                  role="option"
+                >
+                  Діловий захід
+                </div>
+                <div
+                  class="custom-select__option"
+                  data-value="private"
+                  role="option"
+                >
+                  Приватний захід
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contacts__field contacts__field--comment">
+            <input type="text" required id="comment" autocomplete="none" />
+            <label for="comment">Коментар</label>
+          </div>
+
+          <button type="submit" class="contacts__button button">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <svg class="footer__logo">
+          <use href="./img/icons.svg#icon-logo"></use>
+        </svg>
+
+        <nav class="footer__nav">
+          <a class="footer__nav-item" href="#">Про нас</a>
+          <a class="footer__nav-item" href="#">Послуги</a>
+          <a class="footer__nav-item" href="#">Портфоліо</a>
+          <a class="footer__nav-item" href="#">Блог</a>
+        </nav>
+
+        <div class="footer__info">
+          <div class="footer__info--phone">
+            <a href="tel:+380632525256">+380 (63) 25 25 256</a>
+            <svg class="footer__icon">
+              <use href="./img/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+
+          <div class="footer__info--mail">
+            <a href="mailto:eventplanet@gmail.com">eventplanet@gmail.com</a>
+            <svg class="footer__icon">
+              <use href="./img/icons.svg#icon-mail"></use>
+            </svg>
+          </div>
+        </div>
+        <!-- <div class="footer__mobile">
+          <a>
+            <svg class="footer__mobile-logo">
+              <use href="./img/icons.svg#icon-logo"></use>
+            </svg>
+          </a>
+
+          <div class="footer__mobile-info">
+            <a href="tel:+380632525256">+380 (63) 25 25 256</a>
+            <a href="mailto:eventplanet@gmail.com">eventplanet@gmail.com</a>
+          </div>
+
+          <button class="footer__burger menu-btn-open" type="button">
+            <svg class="footer__burger-icon">
+              <use href="./img/icons.svg#icon-menu-burger"></use>
+            </svg>
+          </button>
+        </div> -->
+      </div>
+      <div class="footer__links">
+        <a href="https://www.instagram.com/">
+          <svg class="link footer__link">
+            <use href="./img/icons.svg#icon-instagram"></use>
+          </svg>
+        </a>
+
+        <a href="https://www.facebook.com/">
+          <svg class="link footer__link">
+            <use href="./img/icons.svg#icon-facebook"></use>
+          </svg>
+        </a>
+
+        <a href="https://www.youtube.com/">
+          <svg class="link footer__link">
+            <use href="./img/icons.svg#icon-youtube"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
   </body>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="./js/mobile-menu.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/mobile-menu.js"></script>
+
+  <script src="./js/reveal.js"></script>
 </html>

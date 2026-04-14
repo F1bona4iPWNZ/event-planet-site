@@ -1,83 +1,89 @@
 @use "../utils/variables" as *;
 
 .footer {
-  position: relative;
-  top: -120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: all 0.3s ease;
+  background-color: var(--color-nav-black);
 
   &__container {
-    background-image: url(../img/footer/footer-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    gap: 10px;
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+    }
   }
 
-  &__content {
-    padding-top: 100px;
-    padding-bottom: 26px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-
-    @media screen and (min-width: $bp-tablet) {
-      padding-top: 141px;
-      padding-bottom: 56px;
-    }
+  &__logo {
+    padding: 20px 40px;
+    display: block;
+    width: 175px;
+    height: 68px;
+    fill: var(--color-background-light);
   }
 
   &__nav {
     display: flex;
-    flex-direction: column;
-    gap: 14px;
-    flex-wrap: wrap;
-    font-size: 14px;
+    gap: 16px;
+    align-items: center;
 
     @media screen and (min-width: $bp-mobile) {
-      gap: 32px;
-      gap: 32px;
-      flex-direction: row;
+      gap: 30px;
     }
-
-    @media screen and (min-width: $bp-tablet) {
-      gap: 52px;
-      font-size: 20px;
+    @media screen and (min-width: $bp-desktop) {
+      gap: 57px;
     }
   }
 
-  &__icon-call {
-    display: inline-block;
-    fill: var(--color-primary-light);
-    width: 28px;
-    height: 28px;
-    box-shadow: 0 0 0 0 var(--color-primary-light);
-    border-radius: 50%;
-    animation: shake 2s infinite; /* Запуск анімації */
+  &__nav-item {
+    transition: bottom 280ms ease-in-out;
 
-    @keyframes shake {
-      0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 var(--color-primary-light);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
-      }
-      100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-      }
+    &:after {
+      border-bottom: 1px solid var(--color-primary-red);
+      bottom: 0px;
+      content: " ";
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      transition: all 280ms ease-in-out;
+      width: 0;
+    }
+
+    &:hover::after {
+      bottom: auto;
+      top: 0;
+      width: 100%;
     }
   }
 
-  &__address-icons {
+  &__info {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding-bottom: 30px;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 10px;
+
+    &--phone,
+    &--mail {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
-  &__address-icon {
-    fill: var(--color-primary-gray);
+  &__links {
+    display: flex;
+    gap: 14px;
+  }
+  &__icon {
+    width: 18px;
+    height: 15px;
+    fill: var(--color-background-light);
   }
 }

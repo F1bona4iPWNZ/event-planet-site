@@ -1,10 +1,10 @@
 const swiper = new Swiper(".hero__container", {
   direction: "vertical",
   slidesPerView: 1,
-  // autoplay: {
-  //   delay: 3000,
-  // },
-  // speed: 800,
+  autoplay: {
+    delay: 3000,
+  },
+  speed: 2000,
   loop:true,
 });
 
@@ -18,71 +18,7 @@ swiper.on("slideChange", () => {
 
   thumb.style.transform = `translateY(${movePercent}%)`;
 });
-// const thumbHeight = 100 / swiper.slides.length;
-// thumb.style.height = `${thumbHeight}%`;
 
-// var swiper = new Swiper(".benefits__container", {
-//   slidesPerView: 1,
-//   loop: true,
-//   spaceBetween: 20,
-//   speed: 1600,
-//   autoplay: {
-//     delay: 3000,
-//   },
-
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
-
-// var swiperTour = new Swiper(".tours__container", {
-//   slidesPerView: "auto",
-//   spaceBetween: 30,
-//   centeredSlides: false,
-
-//   loop: true,
-//   speed: 2000,
-//   autoplay: {
-//     delay: 2000,
-//   },
-
-//   grabCursor: true,
-// });
-
-// // rating
-// document.querySelectorAll(".tours__ratio").forEach((rateBlock) => {
-//   const reviewId = rateBlock.dataset.reviewId;
-//   const storageKey = `tours-rating-${reviewId}`;
-
-//   const savedRating = localStorage.getItem(storageKey);
-
-//   if (savedRating) {
-//     const savedInput = rateBlock.querySelector(
-//       `.rating__input[value="${savedRating}"]`,
-//     );
-//     if (savedInput) {
-//       savedInput.checked = true;
-//     }
-//   }
-
-//   rateBlock.querySelectorAll(".rating__input").forEach((input) => {
-//     input.addEventListener("change", () => {
-//       localStorage.setItem(storageKey, input.value);
-//     });
-//   });
-// });
-
-// const header = document.querySelector('.header');
-
-// window.addEventListener('scroll', () => {
-//   if (window.scrollY > 50) {
-//     header.style.background = 'rgba(0,0,0,0.7)';
-//     header.style.backdropFilter = 'blur(10px)';
-//   } else {
-//     header.style.background = 'transparent';
-//   }
-// });
 
 document.querySelector('.hero__arrow').addEventListener('click', () => {
   window.scrollTo({
@@ -91,20 +27,48 @@ document.querySelector('.hero__arrow').addEventListener('click', () => {
   });
 });
 
-const reveals = document.querySelectorAll('.reveal');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
+
+document.querySelectorAll('[data-select]').forEach(select => {
+  const trigger = select.querySelector('[data-select-trigger]');
+  const text = select.querySelector('.custom-select__text');
+  const options = select.querySelectorAll('.custom-select__option');
+  const input = select.querySelector('input[type="hidden"]');
+
+  // toggle dropdown
+  trigger.addEventListener('click', e => {
+    e.stopPropagation();
+
+    // інші select
+    document.querySelectorAll('[data-select]').forEach(s => {
+      if (s !== select) s.classList.remove('active');
+    });
+
+    select.classList.toggle('active');
+  });
+
+  // вибір опції
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      text.textContent = option.textContent;
+      input.value = option.dataset.value;
+
+      select.classList.remove('active');
+    });
+  });
+
+  // keyboard support (Enter / Space)
+  trigger.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      trigger.click();
     }
   });
-}, { threshold: 0.2 });
+});
 
-reveals.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(50px)';
-  el.style.transition = 'all 0.8s ease';
-  observer.observe(el);
+// клік поза select
+document.addEventListener('click', () => {
+  document.querySelectorAll('[data-select]').forEach(select => {
+    select.classList.remove('active');
+  });
 });
